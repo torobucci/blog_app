@@ -4,9 +4,9 @@ class Post < ApplicationRecord
   belongs_to :user, foreign_key: 'author_id', counter_cache: :posts_counter
 
   def update_user_posts_counter
-    if saved_change_to_author_id? || destroyed?
-      User.reset_counters(user.id, :posts)
-    end
+    return unless saved_change_to_author_id? || destroyed?
+
+    User.reset_counters(user.id, :posts)
   end
 
   def recent_comments
