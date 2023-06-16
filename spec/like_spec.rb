@@ -8,4 +8,16 @@ RSpec.describe Like, type: :model do
   it 'new like should be saved in the database' do
     expect(subject.new_record?).to be_truthy
   end
+
+  describe 'update_posts_likes_counter' do
+    user = User.create(name: 'Man', photo: 'photo', bio: 'bio', posts_counter: 0)
+    post = Post.create(title: 'post', text: 'This is my post', author_id: user.id, comments_counter: 0,
+                       likes_counter: 0)
+
+    subject { described_class.create(post:, user_id: user.id) }
+
+    it 'posts comments count should increase' do
+      expect(subject.post.likes_counter).to eq(post.likes_counter)
+    end
+  end
 end
