@@ -11,9 +11,11 @@
   <p><%= @post.text %></p>
 </div>
 
-<div class="comments">
-  <% @comments.each do |comment| %>
-    <li><%= comment.author.name %>:
+<% if @post.comments_counter > 0 %>
+  <div class="comments">
+    <% @comments.each do |comment| %>
+      <li><%= comment.author.name %>:
       <%= comment.text %></li>
-  <% end %>
-</div>
+    <% end %>
+  </div>
+<%end%>
