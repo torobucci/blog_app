@@ -1,1 +1,32 @@
-<h1>Showing a specific User</h1>
+<div class="user">
+  <div class="user-photo">
+    <img src="<%= @user.photo %>" alt="User Photo">
+  </div>
+  <div class="user-details">
+    <%= link_to user_url(@user), class: 'name' do %>
+      <%= @user.name %>
+    <% end %>
+    <p class="posts-no">
+      <%= "Number of posts: #{@user.posts_counter}" %>
+    </p>
+  </div>
+</div>
+<div class= "bio">
+    <h3>Bio:</h3>
+    <p><%= @user.bio %></p>
+</div>
+<% @user.recent_posts.each do |post| %>
+     <div class = "post">
+        <%= link_to user_post_url(user_id: @user.id, id: post.id), class: 'post-link' do %>
+          <h3>Post #<%= @user.posts.index(post) + 1 %></h3>
+        <% end %>
+        <h4><%= post.text %></h4>
+          <div class="count">
+            <p>Comments: <%= post.comments_counter %></p>
+            <p>Likes: <%= post.likes_counter %></p>
+          </div>
+     </div>
+<% end %>
+<%= link_to user_posts_url(@user.id), class: 'btn-link' do %>
+  <button>See all posts</button>
+<% end %>
