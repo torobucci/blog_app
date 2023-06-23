@@ -19,3 +19,15 @@
     <% end %>
   </div>
 <%end%>
+
+<%= button_to "Like Post", user_post_likes_url(user_id: current_user.id, post_id: @post.id), method: :post %>
+
+
+<div class="post-form">
+  <h3>Add Comment</h3>
+<%= form_with(model: [@post, Comment.new], url: user_post_comments_url(@post.author, @post), local: true) do |form| %>
+  <%= form.label :text %>
+  <%= form.text_area :text %>
+  <%= form.submit 'Create Comment' %>
+<% end %>
+</div>

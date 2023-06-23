@@ -27,6 +27,9 @@
           </div>
      </div>
 <% end %>
+<%= link_to new_user_post_url(@user.id), class: 'btn-link' do %>
+  <button>Add new post</button>
+<% end %>
 <%= link_to user_posts_url(@user.id), class: 'btn-link' do %>
   <button>See all posts</button>
 <% end %>
