@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+.button_to {
+  align-self: center;
+}
+
 .container {
   margin: 20px auto;
   padding: 20px 20px 10px 20px;
@@ -71,6 +75,7 @@
   align-self: center;
 }
 
+button,
 .btn-link button {
   cursor: pointer;
   padding: 5px;
@@ -89,4 +94,14 @@
 .post-header {
   display: flex;
   justify-content: space-between;
+}
+
+.post-form {
+  align-self: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
