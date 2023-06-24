@@ -15,7 +15,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(params.require(:post).permit(:title, :text))
+    @post = Post.new(post_params)
     @post.author_id = current_user.id
     @post.comments_counter = 0
     @post.likes_counter = 0
@@ -25,5 +25,11 @@ class PostsController < ApplicationController
       flash.now[:error] = 'Error: Post could not be saved'
       render :new
     end
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :text)
   end
 end
