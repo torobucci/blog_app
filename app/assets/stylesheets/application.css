@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+.button_to {
+  align-self: center;
+}
+
 .container {
   margin: 20px auto;
   padding: 20px 20px 10px 20px;
@@ -71,6 +75,7 @@
   align-self: center;
 }
 
+button,
 .btn-link button {
   cursor: pointer;
   padding: 5px;
@@ -89,4 +94,32 @@
 .post-header {
   display: flex;
   justify-content: space-between;
+}
+
+.post-form {
+  align-self: center;
+  border: 2px solid black;
+  width: 80%;
+  padding: 15px;
+}
+
+input[type="submit"] {
+  padding: 5px;
+  width: 40%;
+}
+
+input {
+  padding: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.like-comment {
+  display: flex;
+  justify-content: center;
+  column-gap: 1rem;
 }

@@ -19,3 +19,14 @@
     <% end %>
   </div>
 <%end%>
+
+<div class ="like-comment">
+<%= link_to new_user_post_comment_url(@user, @post), class: 'btn-link' do %>
+  <button>Add comment</button>
+<% end %>
+
+<%= button_to "Like Post", user_post_likes_url(user_id: current_user.id, post_id: @post.id),
+    method: :post, class: 'btn-link' %>
+
+</div>
+
