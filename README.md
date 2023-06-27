@@ -2,8 +2,8 @@
 
 # 📗 Table of Contents
 
-- [� Table of Contents](#-table-of-contents)
-- [📖 Blog App](#--Blog-App)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖  Blog App](#--blog-app)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -12,6 +12,7 @@
     - [Setup](#setup)
     - [Install](#install)
     - [Usage](#usage)
+    - [Run tests](#run-tests)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -33,8 +34,12 @@
 
 ### Key Features <a name="key-features"></a>
 
-- Data Model
-- Medium fidelity UI
+- Display all users
+- Display users posts
+- Display comments and likes for a post
+- Add a comment for a user
+- Like a post
+- Create a new post for a user
 
 <!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
@@ -84,6 +89,20 @@ To run the project, execute the following command:
 <li>rails server</li>
 </ul>
 
+### Run tests
+
+To run tests, run the following command:
+
+```sh
+  rubocop -a
+```
+```sh
+  npx stylelint "**/*.{css,scss}"
+```
+```sh
+  rspec .
+```
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
@@ -93,9 +112,15 @@ To run the project, execute the following command:
 - Twitter: [@torobucii](https://twitter.com/@torobucii)
 - LinkedIn: [Kevin Toro](https://www.linkedin.com/in/kevin-toro-047181238/)
 
+👤 **Walid Kabboussa**
+
+- GitHub: [@Hisoka37](https://github.com/Hisoka37)
+- Twitter: [@KBwalid9](https://twitter.com/KBwalid9)
+- LinkedIn: [Walid Kabboussa](https://www.linkedin.com/in/walidkb/)
+
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Authentication
+- Authorization
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
