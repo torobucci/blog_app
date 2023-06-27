@@ -21,7 +21,7 @@ describe User, type: :request do
 
       get users_url
 
-      expect(response.body).to include('Listing Users')
+      expect(response.body).to include('Number of posts')
     end
   end
 
@@ -45,7 +45,7 @@ describe User, type: :request do
     it 'response body displays correct placeholder text' do
       user = User.create! valid_attributes
       get user_url(user)
-      expect(response.body).to include('Showing a specific User')
+      expect(response.body).to include('Bio')
     end
   end
 end

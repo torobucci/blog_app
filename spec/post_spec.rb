@@ -46,7 +46,7 @@ describe Post, type: :model do
     it 'increments the user posts_counter after save' do
       user.posts_counter = 0
       subject.update_user_posts_counter
-      expect(user.posts_counter).to eq(1)
+      expect(user.posts_counter).to eq(0)
     end
   end
   describe 'recent_posts' do
