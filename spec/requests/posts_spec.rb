@@ -20,7 +20,7 @@ describe Post, type: :request do
     it 'response body displays correct placeholder text' do
       get user_posts_url(user.id)
 
-      expect(response.body).to include('Listing User Posts')
+      expect(response.body).to include('Pagination')
     end
   end
 
@@ -37,7 +37,7 @@ describe Post, type: :request do
     it 'response body displays correct placeholder text' do
       get user_post_url(user_id: user.id, id: post.id)
 
-      expect(response.body).to include('Showing User specific post')
+      expect(response.body).to include('Add comment')
     end
   end
 end

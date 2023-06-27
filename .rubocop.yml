@@ -20,6 +20,7 @@ Metrics/BlockLength:
     - './db/schema.rb'
     - './spec/post_spec.rb'
     - './spec/requests/**/*'
+    - './spec/features/**/*'
   Max: 30
 
 Style/Documentation:
