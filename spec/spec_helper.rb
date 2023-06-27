@@ -111,7 +111,6 @@ end
 
 Capybara.javascript_driver = :selenium
 
-
 RSpec.configure do |config|
   config.before(:suite) do
     DatabaseCleaner.clean_with(:truncation)
