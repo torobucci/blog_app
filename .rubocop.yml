@@ -8,6 +8,8 @@ AllCops:
   DisplayCopNames: true
 
 Layout/LineLength:
+  Exclude:
+    - './config/initializers/**/*'
   Max: 120
 Metrics/MethodLength:
   Max: 20
