@@ -41,14 +41,13 @@ ActiveRecord::Schema[7.0].define(version: 20_230_627_223_647) do
     t.integer 'likes_counter'
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
-    t.index ['author_id'], name: 'index_posts_on_author_id'
   end
 
   create_table 'users', force: :cascade do |t|
     t.string 'name'
     t.string 'photo'
     t.text 'bio'
-    t.integer 'posts_counter', default: 0
+    t.integer 'posts_counter'
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
     t.string 'email', default: '', null: false
